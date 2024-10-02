@@ -11,6 +11,7 @@
       background-position: center; 
       background-repeat: no-repeat;
       font-family: 'Montserrat', 'Poppins', sans-serif;
+      /* background-color: #000072; */
       display: flex;
       justify-content: center;
       align-items: center;
@@ -20,6 +21,7 @@
     }
 
     .form-container {
+      /* background-color: #1db954;  */
       background-color: #000072;
       padding: 30px;
       border-radius: 10px;
@@ -29,7 +31,8 @@
 
     h1 {
       text-align: center;
-      color: white;
+      /* color: #1db954; */
+      color:white;
       margin-bottom: 25px;
       font-size: 24px;
     }
@@ -67,7 +70,14 @@
       transition: background-color 0.3s;
     }
 
+    select{
+      font-family: 'Montserrat', 'Poppins', sans-serif;
+      margin-bottom:15px;
+      border-radius: 4px;
+    }
+
     input[type="submit"]:hover {
+      font-family: 'Montserrat', 'Poppins', sans-serif;
       background-color: #0000a3;
       font-style: bold;
     }
@@ -78,6 +88,7 @@
       margin-top: -15px;
       margin-bottom: 10px;
     }
+
   </style>
 </head>
 <body>
@@ -87,13 +98,24 @@
       @csrf
       
       <label for="nama">Nama:</label>
+      @foreach($errors->get('nama') as $msg)
+      <p class="error-msg">{{$msg}}</p>
+      @endforeach
       <input type="text" id="nama" name="nama">
       
       <label for="npm">NPM:</label>
+      @foreach($errors->get('npm') as $msg)
+      <p class="error-msg">{{$msg}}</p>
+      @endforeach
       <input type="text" id="npm" name="npm">
       
-      <label for="kelas">Kelas:</label>
-      <input type="text" id="kelas" name="kelas">
+
+      <label for="id_kelas">Kelas:</label>
+      <select name="kelas_id" id="kelas_id" required>
+        @foreach ($kelas as $kelasItem)
+        <option value="{{$kelasItem->id}}">{{$kelasItem->nama_kelas}}</option>
+        @endforeach
+  </select>
 
       <input type="submit" value="Submit">
     </form>
