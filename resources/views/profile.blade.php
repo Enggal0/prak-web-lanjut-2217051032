@@ -63,7 +63,7 @@
                 <td><?= $nama ?></td> 
             </tr> 
             <tr>   
-                <td><?= $kelas ?></td> 
+                <td><?= $nama_kelas ?? 'Kelas tidak ditemukan' ?></td> 
             </tr> 
             <tr> 
                 <td><?= $npm ?></td> 
