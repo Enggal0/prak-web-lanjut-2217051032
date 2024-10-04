@@ -1,0 +1,25 @@
+.container {
+    max-width: 800px; /* Lebar maksimal container */
+    margin: 0 auto; /* Pusatkan container */
+    padding: 1px; /* Tambahkan padding */
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #0000a3; /* Latar belakang tabel */
+    border-radius: 4px;
+    margin-bottom: 5px;
+}
+
+th, td {
+    padding: 10px 40px;
+    color: white;
+
+}
+
+th {
+    text-align: left;
+    color: white; /* Teks  */
+    border-bottom: 1px solid #1db954; /* Garis putih di bawah field */
+}
