@@ -16,9 +16,23 @@ class UserModel extends Model
         return $this->belongsTo(Kelas::class, 'kelas_id');
     }
 
-    public function getUser(){ 
-        return $this->join('kelas', 'kelas.id', '=', 
-        'user.kelas_id')->select('user.*', 'kelas.nama_kelas as 
-        nama_kelas')->get(); 
-        } 
+    public function getUser($id = null){ 
+    if ($id != null){
+        return $this->join('kelas', 'kelas.id', '=', 'user.kelas_id')
+                    ->select('user.*', 'kelas.nama_kelas as nama_kelas')
+                    ->where('user.id', $id) // mengambil data berdasarkan id
+                    ->first(); // untuk hanya 1 record                
+    } else {
+        return $this->join('kelas', 'kelas.id', '=', 'user.kelas_id')
+                    ->select('user.*', 'kelas.nama_kelas as nama_kelas')
+                    ->get(); // ambil semua data user
+    }
+} 
+
+    protected $fillable = [
+        'nama',
+        'npm',
+        'kelas_id',
+        'foto', //kolom foto
+    ];
 }
