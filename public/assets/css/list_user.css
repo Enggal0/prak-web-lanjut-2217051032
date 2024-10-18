@@ -1,25 +1,52 @@
 .container {
-    max-width: 800px; /* Lebar maksimal container */
-    margin: 0 auto; /* Pusatkan container */
+    max-width: 1000px; /* Lebar maksimal container */
+    margin: 0 auto; /* Pusatkan secara horizontal */
     padding: 1px; /* Tambahkan padding */
+    margin-top: 0; /* Posisikan di bagian atas halaman */
 }
+
 
 table {
     width: 100%;
     border-collapse: collapse;
-    background-color: #0000a3; /* Latar belakang tabel */
     border-radius: 4px;
     margin-bottom: 5px;
+    
 }
 
 th, td {
-    padding: 10px 40px;
-    color: white;
+    padding: 10px 60px;
+    color: #333;
+    background-color: white;
+    border-bottom: 1px solid #333; /* Garis putih di bawah field */
+
 
 }
 
 th {
     text-align: left;
+    background-color: #0000a3;
     color: white; /* Teks  */
     border-bottom: 1px solid #1db954; /* Garis putih di bawah field */
+}
+
+.btn-tambah {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-bottom: 20px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff; /* Warna teks */
+    background-color: #1db954; /* Warna latar belakang */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none; /* Menghilangkan garis bawah */
+    transition: background-color 0.3s ease; /* Animasi perubahan warna */
+}
+
+/* Gaya hover */
+.btn-tambah:hover {
+    background-color: #0000a3; /* Warna latar saat di-hover */
 }

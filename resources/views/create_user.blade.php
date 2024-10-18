@@ -4,7 +4,7 @@
 <div> 
   <div class="form-container">
     <h1>Formulir Biodata Mahasiswa</h1>
-    <form action="{{ route('user.store') }}" method="POST">
+    <form action="{{ route('user.store') }}" method="POST" enctype="multipart/form-data">
       @csrf
       
       <label for="nama">Nama:</label>
@@ -25,7 +25,10 @@
         @foreach ($kelas as $kelasItem)
         <option value="{{$kelasItem->id}}">{{$kelasItem->nama_kelas}}</option>
         @endforeach
-  </select>
+      </select><br>
+
+      <label for="foto">Foto:</label>
+      <input type="file" id="foto" name="foto"><br><br>
 
       <input type="submit" value="Submit">
     </form>
