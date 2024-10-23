@@ -1,52 +1,91 @@
-.container {
-    max-width: 1000px; /* Lebar maksimal container */
-    margin: 0 auto; /* Pusatkan secara horizontal */
-    padding: 1px; /* Tambahkan padding */
-    margin-top: 0; /* Posisikan di bagian atas halaman */
+body {
+    background-color: #f0f8ff; /* Latar belakang cerah */
+    font-family: 'Montserrat', sans-serif; /* Font Montserrat */
+    color: #333; /* Warna teks */
+    margin: 0; /* Menghilangkan margin default */
+    padding: 0; /* Menghilangkan padding default */
 }
 
+.container {
+    max-width: 800px; /* Lebar maksimum kontainer */
+    margin: 50px auto; /* Pusatkan kontainer secara vertikal dan horizontal */
+    padding: 20px; /* Jarak dalam kontainer */
+    background-color: #ffffff; /* Latar belakang putih */
+    border-radius: 8px; /* Sudut membulat */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Bayangan kontainer */
+}
+
+a.btn-tambah {
+    display: inline-block; /* Membuat tombol tampil sebagai blok */
+    margin-bottom: 20px; /* Jarak bawah tombol */
+    padding: 10px 20px; /* Jarak dalam tombol */
+    background-color: #007bff; /* Warna biru untuk tombol */
+    color: white; /* Warna teks putih */
+    text-decoration: none; /* Menghilangkan garis bawah pada teks */
+    border-radius: 5px; /* Sudut membulat tombol */
+    transition: background-color 0.3s; /* Transisi halus untuk hover */
+}
+
+a.btn-tambah:hover {
+    background-color: #0056b3; /* Warna biru lebih gelap saat hover */
+}
 
 table {
-    width: 100%;
-    border-collapse: collapse;
-    border-radius: 4px;
-    margin-bottom: 5px;
-    
+    width: 100%; /* Lebar tabel 100% dari kontainer */
+    border-collapse: collapse; /* Menghilangkan jarak antar sel */
+    margin-top: 20px; /* Jarak atas tabel */
 }
 
-th, td {
-    padding: 10px 60px;
-    color: #333;
-    background-color: white;
-    border-bottom: 1px solid #333; /* Garis putih di bawah field */
-
-
+table th, table td {
+    padding: 12px; /* Jarak dalam sel */
+    text-align: left; /* Rata kiri untuk teks */
+    border-bottom: 1px solid #ddd; /* Garis bawah sel */
 }
 
-th {
-    text-align: left;
-    background-color: #0000a3;
-    color: white; /* Teks  */
-    border-bottom: 1px solid #1db954; /* Garis putih di bawah field */
+table th {
+    background-color: #0e0e78; /* Warna latar belakang header tabel */
+    color: white; /* Warna teks header tabel */
 }
 
-.btn-tambah {
-    display: inline-block;
-    padding: 10px 20px;
-    margin-bottom: 20px;
-    font-size: 16px;
-    font-weight: bold;
-    color: #fff; /* Warna teks */
-    background-color: #1db954; /* Warna latar belakang */
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    text-align: center;
-    text-decoration: none; /* Menghilangkan garis bawah */
-    transition: background-color 0.3s ease; /* Animasi perubahan warna */
+table tr:hover {
+    background-color: #f1f1f1; /* Warna latar belakang saat hover pada baris tabel */
 }
 
-/* Gaya hover */
-.btn-tambah:hover {
-    background-color: #0000a3; /* Warna latar saat di-hover */
+table img {
+    border-radius: 5px; /* Sudut membulat pada gambar */
+    width: 100px; /* Lebar gambar */
+    height: auto; /* Tinggi otomatis untuk menjaga proporsi */
+}
+
+.btn-view, .btn-edit, .btn-danger {
+    display: inline-block; /* Membuat tombol tampil sebagai blok */
+    padding: 5px 10px; /* Jarak dalam tombol */
+    border-radius: 5px; /* Sudut membulat tombol */
+    color: white; /* Warna teks putih */
+    text-decoration: none; /* Menghilangkan garis bawah pada teks */
+    transition: background-color 0.3s; /* Transisi halus untuk hover */
+}
+
+.btn-view {
+    background-color: #28a745; /* Warna hijau untuk tombol view */
+}
+
+.btn-edit {
+    background-color: #ffc107; /* Warna kuning untuk tombol edit */
+}
+
+.btn-danger {
+    background-color: #dc3545; /* Warna merah untuk tombol delete */
+}
+
+.btn-view:hover {
+    background-color: #218838; /* Warna hijau lebih gelap saat hover */
+}
+
+.btn-edit:hover {
+    background-color: #e0a800; /* Warna kuning lebih gelap saat hover */
+}
+
+.btn-danger:hover {
+    background-color: #c82333; /* Warna merah lebih gelap saat hover */
 }
