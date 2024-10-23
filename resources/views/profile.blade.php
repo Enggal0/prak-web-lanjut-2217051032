@@ -21,7 +21,7 @@
                 <td>{{$user->nama_kelas ?? 'Kelas tidak ditemukan' }}</td> 
             </tr> 
             <tr> 
-                <td>{{$user->npm}}</td> 
+                <td>{{$user->ipk}}</td> 
             </tr> 
         </table>
     </div>
