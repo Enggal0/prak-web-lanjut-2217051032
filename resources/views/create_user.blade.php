@@ -13,11 +13,11 @@
       @endforeach
       <input type="text" id="nama" name="nama">
       
-      <label for="npm">NPM:</label>
-      @foreach($errors->get('npm') as $msg)
+      <label for="ipk">IPK:</label>
+      @foreach($errors->get('ipk') as $msg)
       <p class="error-msg">{{$msg}}</p>
       @endforeach
-      <input type="text" id="npm" name="npm">
+      <input type="text" id="ipk" name="ipk">
       
 
       <label for="id_kelas">Kelas:</label>
@@ -26,6 +26,7 @@
         <option value="{{$kelasItem->id}}">{{$kelasItem->nama_kelas}}</option>
         @endforeach
       </select><br>
+
 
       <label for="foto">Foto:</label>
       <input type="file" id="foto" name="foto"><br><br>

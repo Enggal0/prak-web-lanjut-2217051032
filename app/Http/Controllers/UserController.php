@@ -27,7 +27,7 @@ class UserController extends Controller
         //validasi input
         $request -> validate([
             'nama' => 'required|string|max:255',
-            'npm' => 'required|string|max:255',
+            'ipk' => 'nullable|numeric|min:0|max:4.00', // Validasi IPK
             'kelas_id' => 'required|integer',
             'foto' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:2048', //validasi foto
         ]);
@@ -44,7 +44,7 @@ class UserController extends Controller
         // Menyimpan data ke database termasuk path foto
         $this->userModel->create([
             'nama' => $request->input('nama'),
-            'npm' => $request->input('npm'),
+            'ipk' => $request->input('ipk'),
             'kelas_id' => $request->input('kelas_id'),
             'foto' => $fotoPath, // Menyimpan path foto
             ]);
@@ -80,6 +80,27 @@ class UserController extends Controller
         return view('show_user', compact('user', 'kelas','title'));
     }
 
+    // public function show($id){
+    //     $user = UserModel::where('encrypted_id',
+    //     $id)->first();
+
+    //     $data = [
+    //         'nama' =>
+    //         auth()->user()->user->nama,
+    //         'ipk' =>
+    //         auth()->user()->user->ipk,
+    //         'kelas' => auth()->user()->kelas->nama_kelas,
+            
+    //         'tanggal' =>
+    //         Carbon::parse($user->created_at)->locale('i
+    //         d_ID')->isoFormat('D MMMM YYYY, HH:mm'),
+    //         ];
+
+    //     return view('show_user', compact('user', 'kelas','title'));
+    // }
+
+
+
     public function edit($id)
     {
         $user = UserModel::findOrFail($id);
@@ -94,8 +115,10 @@ class UserController extends Controller
         $user = UserModel::findOrFail($id);
         
         $user->nama = $request->nama;
-        $user->npm = $request->npm;
+        $user->ipk = $request->ipk;
         $user->kelas_id = $request->kelas_id;
+        
+
         
         if ($request->hasFile('foto')) {
         $fileName = time() . '.' . $request->foto->extension();

@@ -14,11 +14,11 @@
       @endforeach
       <input type="text" id="nama" name="nama" value="{{ old('nama', $user->nama) }}"> <!-- Isi dengan data yang ada -->
 
-      <label for="npm">NPM:</label>
-      @foreach($errors->get('npm') as $msg)
+      <label for="ipk">IPK:</label>
+      @foreach($errors->get('ipk') as $msg)
       <p class="error-msg">{{$msg}}</p>
       @endforeach
-      <input type="text" id="npm" name="npm" value="{{ old('npm', $user->npm) }}"> <!-- Isi dengan data yang ada -->
+      <input type="text" id="ipk" name="ipk" value="{{ old('ipk', $user->ipk) }}"> <!-- Isi dengan data yang ada -->
 
       <label for="kelas_id">Kelas</label>
         <select class="form-select" name="kelas_id" id="kelas_id" required>
