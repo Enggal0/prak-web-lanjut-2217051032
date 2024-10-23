@@ -1,0 +1,51 @@
+body {
+    background-color: #f0f8ff; /* Warna latar belakang cerah */
+    font-family: 'Montserrat', sans-serif; /* Menggunakan font Montserrat */
+    color: #333; /* Warna teks */
+    margin: 0;
+    padding: 0;
+}
+
+.profile-container {
+    max-width: 600px; /* Lebar maksimum kontainer */
+    margin: 50px auto; /* Pusatkan kontainer secara vertikal dan horizontal */
+    padding: 20px;
+    background-color: #fff; /* Warna latar belakang putih untuk kontainer */
+    border-radius: 10px; /* Sudut membulat */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Bayangan kontainer */
+    text-align: center; /* Pusatkan teks */
+}
+
+.profile-container img {
+    width: 150px; /* Ukuran gambar profil */
+    height: 150px; /* Tinggi gambar profil */
+    border-radius: 50%; /* Membuat gambar menjadi bulat */
+    border: 3px solid #00b300; /* Border hijau */
+    margin-bottom: 20px; /* Jarak bawah gambar */
+}
+
+table {
+    width: 100%; /* Lebar tabel 100% dari kontainer */
+    border-collapse: collapse; /* Menghilangkan jarak antar sel */
+}
+
+table tr td {
+    padding: 15px; /* Jarak dalam sel */
+    border-bottom: 1px solid #eee; /* Garis bawah pada sel */
+}
+
+table tr:last-child td {
+    border-bottom: none; /* Menghilangkan garis bawah pada sel terakhir */
+}
+
+/* Gaya untuk teks nama dan NPM */
+.card-title {
+    font-size: 20px; /* Ukuran font */
+    color: #0000a3; /* Warna biru */
+    margin: 0; /* Menghilangkan margin */
+}
+
+.kelas {
+    color: #00b300; /* Warna hijau untuk kelas */
+    font-weight: bold; /* Menebalkan font */
+}
